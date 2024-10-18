@@ -1,6 +1,5 @@
 ## ExampleGradle
 ## Projeto Rest para aprender a publicar API na nuvem
-## Tecnologias utilizadas:
 <ul>
   <li>Spring Boot 3</li>
   <li>Java 17</li>
