@@ -1,5 +1,5 @@
-# ExampleGradle<br>
-## Projeto Rest para aprender a publicar API na nuvem<br>
+## ExampleGradle
+## Projeto Rest para aprender a publicar API na nuvem
 ## Tecnologias utilizadas:
 <ul>
   <li>Spring Boot 3</li>
