@@ -1,22 +1,22 @@
 package me.dio.santander_dev_week.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-@Entity
+@Entity(name = "tb_account")
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true)
     private String number;
     private String agency;
+    @Column(scale = 13, precision = 2)
     private BigDecimal balance;
+    @Column(name = "additional_limit", scale = 13, precision = 2)
     private BigDecimal limit;
 
     public BigDecimal getLimit() {

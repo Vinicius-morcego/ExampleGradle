@@ -1,20 +1,18 @@
 package me.dio.santander_dev_week.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-@Entity
+@Entity(name = "tb_card")
 public class Card {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(unique = true)
     private String number;
+    @Column(name = "available_limit", scale = 13, precision = 2)
     private BigDecimal limit;
 
     public BigDecimal getLimit() {
